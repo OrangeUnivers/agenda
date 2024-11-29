@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save and View Data</title>
+</head>
+<body>
+    <h1>Save Data</h1>
+    <label for="titleInput">Title:</label>
+    <input type="text" id="titleInput" placeholder="Enter title"><br>
+    
+    <label for="dateInput">Date:</label>
+    <input type="text" id="dateInput" placeholder="Enter date"><br>
+    
+    <button onclick="saveData()">Save</button>
+
+    <h2>Saved Data</h2>
+    <ul id="dataList"></ul>
+
+    <script type="module">
+        // Import Firebase SDKs
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDZPKHBaMBCcpdYSybKZ9WUWySs09nYWZs",
+            authDomain: "agenda-personal-e5887.firebaseapp.com",
+            databaseURL: "https://agenda-personal-e5887-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "agenda-personal-e5887",
+            storageBucket: "agenda-personal-e5887.firebasestorage.app",
+            messagingSenderId: "235729868377",
+            appId: "1:235729868377:web:2091a2dc07932eb8848348",
+            measurementId: "G-HRQXW3X1D4"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Save data to the database
+        async function saveData() {
+            const title = document.getElementById('titleInput').value.trim();
+            const date = document.getElementById('dateInput').value.trim();
+
+            if (!title || !date) {
+                alert('Please fill in both title and date!');
+                return;
+            }
+
+            // Create an object to store
+            const data = {
+                title: title,
+                date: date
+            };
+
+            // Push the object to Firebase
+            const dataRef = ref(database, 'entries/');
+            await push(dataRef, data);
+
+            alert('Data saved successfully!');
+            document.getElementById('titleInput').value = ''; // Clear title input
+            document.getElementById('dateInput').value = ''; // Clear date input
+            loadData(); // Reload data
+        }
+
+        // Load data from the database
+        function loadData() {
+            const dataList = document.getElementById('dataList');
+            dataList.innerHTML = ''; // Clear the list
+
+            const dataRef = ref(database, 'entries/');
+            onValue(dataRef, (snapshot) => {
+                snapshot.forEach((childSnapshot) => {
+                    const entry = childSnapshot.val();
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Title: ${entry.title}, Date: ${entry.date}`;
+                    dataList.appendChild(listItem);
+                });
+            });
+        }
+
+        // Attach functions to the window object
+        window.saveData = saveData;
+        window.loadData = loadData;
+
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

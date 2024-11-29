@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save and View Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Nunito;
+        }
+        th {
+            font-size: 20px;
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            padding: 8px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        td {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 8px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        /* td b {
+            font-size: 18px;
+            background-color: rgb(255, 248, 113);
+            border-radius: 6px;
+            padding-inline: 4px;
+        } */
+        td:hover {
+            background-color: #f0f0f0;
+        }
+        th:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Save Data</h1>
+    <label for="titleInput">Title:</label>
+    <input type="text" id="titleInput" placeholder="Enter title"><br>
+    
+    <label for="dateInput">Date:</label>
+    <input type="text" id="dateInput" placeholder="Enter date"><br>
+    
+    <button onclick="saveData()">Save</button>
+
+    <table style="width: 100%;" id="agenda">
+        <colgroup>
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+        </colgroup>
+        <tr>
+            <th>Montag</th>
+            <th>Dienstag</th>
+            <th>Mittwoch</th>
+            <th>Donnerstag</th>
+            <th>Freitag</th>
+            <th>Samstag</th>
+            <th>Sonntag</th>
+        </tr>
+    </table>
+
+    <h2>Saved Data</h2>
+    <ul id="dataList"></ul>
+
+    <script type="module">
+        // Import Firebase SDKs
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDZPKHBaMBCcpdYSybKZ9WUWySs09nYWZs",
+            authDomain: "agenda-personal-e5887.firebaseapp.com",
+            databaseURL: "https://agenda-personal-e5887-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "agenda-personal-e5887",
+            storageBucket: "agenda-personal-e5887.firebasestorage.app",
+            messagingSenderId: "235729868377",
+            appId: "1:235729868377:web:2091a2dc07932eb8848348",
+            measurementId: "G-HRQXW3X1D4"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Save data to the database
+        async function saveData() {
+            const title = document.getElementById('titleInput').value.trim();
+            const date = document.getElementById('dateInput').value.trim();
+
+            if (!title || !date) {
+                alert('Please fill in both title and date!');
+                return;
+            }
+
+            // Create an object to store
+            const data = {
+                title: title,
+                date: date
+            };
+
+            // Push the object to Firebase
+            const dataRef = ref(database, 'entries/');
+            await push(dataRef, data);
+
+            alert('Data saved successfully!');
+            document.getElementById('titleInput').value = ''; // Clear title input
+            document.getElementById('dateInput').value = ''; // Clear date input
+            loadData(); // Reload data
+        }
+
+        // Load data from the database
+        function loadData() {
+            const dataList = document.getElementById('dataList');
+            dataList.innerHTML = ''; // Clear the list
+
+            const dataRef = ref(database, 'entries/');
+            onValue(dataRef, (snapshot) => {
+                snapshot.forEach((childSnapshot) => {
+                    const entry = childSnapshot.val();
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Title: ${entry.title}, Date: ${entry.date}`;
+                    dataList.appendChild(listItem);
+                });
+            });
+        }
+
+        // Attach functions to the window object
+        window.saveData = saveData;
+        window.loadData = loadData;
+
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+    <script src="data.js" type="text/javascript"></script>
+    <script>
+        var agenda = document.getElementById("agenda");
+        agenda.innerHTML = `<colgroup>
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+            <col style="width: calc(100% / 7);">
+        </colgroup>
+        <tr>
+            <th>Montag</th>
+            <th>Dienstag</th>
+            <th>Mittwoch</th>
+            <th>Donnerstag</th>
+            <th>Freitag</th>
+            <th>Samstag</th>
+            <th>Sonntag</th>
+        </tr>`
+        function reloadTable() {
+            defaultTable.forEach((row, rowIndex) => {
+                let currentRow = document.createElement("tr");
+                if (rowIndex == 3) {
+                    let pause = document.createElement("th");
+                    pause.innerText = "Zehnuhrpause";
+                    pause.setAttribute("colspan", "7");
+                    agenda.appendChild(pause);
+                }
+                if (rowIndex == 5) {
+                    let pause = document.createElement("th");
+                    pause.style.paddingBlock = "15px"
+                    pause.innerText = "Mittagspause";
+                    pause.style.fontSize = "28px";
+                    pause.setAttribute("colspan", "7");
+                    agenda.appendChild(pause);
+                }
+                row.forEach((cell) => {
+                    if (Object.keys(cell).length != 0) {
+                        let currentCell = document.createElement("td");
+                        if (cell.special) {
+                            currentCell.innerHTML = "<span style='background-color: aqua; border-radius: 4px; padding-inline: 3px;'><b>"+cell.subject+"</b><br>"+cell.room+"<br>"+cell.teacher+"</span>";
+                        } else {
+                            currentCell.innerHTML = "<b>"+cell.subject+"</b><br>"+cell.room+"<br>"+cell.teacher;
+                        }
+                        currentRow.appendChild(currentCell);
+                    } else {
+                        let currentCell = document.createElement("td");
+                        currentCell.style = "border: 2px dashed #ddd";
+                        currentRow.appendChild(currentCell);
+                    }
+                });
+                if (row.length < 7) {
+                    Array.from({ length: 7 - row.length }, () => {
+                        let currentCell = document.createElement("td");
+                        currentCell.style = "border: 2px dashed #ddd";
+                        currentRow.appendChild(currentCell);
+                    });
+                }
+                agenda.appendChild(currentRow);
+            });
+        }
+        reloadTable()
+        const cells = document.querySelectorAll("#agenda td");
+
+        // Loop through each cell and make it clickable
+        cells.forEach(cell => {
+            cell.onclick = function () {
+                alert(`You clicked on: ${this.innerHTML}`); // Display the content of the cell
+            };
+        });
+    </script>
+</body>
+</html>
