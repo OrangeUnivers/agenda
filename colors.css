@@ -1,0 +1,64 @@
+td.math {
+    border: 2px solid #FFD966;
+    background-color: #ffedb9;
+}
+td.french {
+    border: 2px solid #86e7cd;
+    background-color: #cef7ec;
+}
+td.latin {
+    border: 2px solid #A9D08E;
+    background-color: #d4e9c6;
+}
+td.english {
+    border: 2px solid #f26c71;
+    background-color: #f49a9d;
+}
+td.biologie {
+    border: 2px solid #FF8CDB;
+    background-color: #ffbcea;
+}
+td.classhour {
+    border: 2px solid #434343;
+    background-color: #7f7f7f;
+}
+td.music {
+    border: 2px solid #79FFB6;
+    background-color: #cdffe4;
+}
+td.informatics {
+    border: 2px solid #3aff4a;
+    background-color: #c3ffc8;
+}
+td.rke {
+    border: 2px solid #ff679f;
+    background-color: #ffa3c5;
+}
+td.sports {
+    border: 2px solid #B4C6E7;
+    background-color: #e0e7f3;
+}
+td.german {
+    border: 2px solid #ebeb3f;
+    background-color: #ffffb9;
+}
+td.bg {
+    border: 2px solid #62ace0;
+    background-color: #a6cce8;
+}
+td.iu {
+    border: 2px solid #bebebe;
+    background-color: #e6e6e6;
+}
+td.chemistry {
+    border: 2px solid #F4B084;
+    background-color: #fadac4;
+}
+td.history {
+    border: 2px solid #93a3b7;
+    background-color: #c4cfde;
+}
+td.geography {
+    border: 2px solid #b887de;
+    background-color: #d3b8e8;
+}
