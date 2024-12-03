@@ -607,7 +607,8 @@
                                 //         await removeData(currentKey);
                                 //     }
                                 // }
-                                if (currentCell.lastElementChild.querySelector("#homework-input").value != cell.special.homework) {
+                                console.log("homework");
+                                if (currentCell.lastElementChild.querySelector("#homework-input").value != cell.special && (cell.special.homework ? true : false)) {
                                     if (currentCell.lastElementChild.querySelector("#homework-input").value != "") {
                                         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
                                         await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});

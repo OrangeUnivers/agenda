@@ -51,5 +51,5 @@ const defaultTable = [
     ]
 ];
 const subjectList = {"Mathe": "math", "Französisch": "french", "Latein": "latin", "Englisch": "english", "Biologie": "biologie", "Klassenstunde": "classhour", "Musik": "music", "Informatik": "informatics", "Religion, Kultur und Ethik": "rke",
-    "Sport": "sports", "Deutsch": "german", "Bildnerisches Gestalten": "bg", "Instrumentalunterricht": "iu", "Chemie": "chemistry", "Geschichte": "history", "Geographie": "geography"};
+    "Sport": "sports", "Deutsch": "german", "Bildnerisches Gestalten": "bg", "Instrumentalunterricht": "iu", "Chemie": "chemistry", "Geschichte": "history", "Geographie": "geography", "Kein Fach": "none"};
 const subjectArray = Object.keys(subjectList);
