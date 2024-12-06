@@ -481,8 +481,9 @@
                             ("<a id='edit-button'>Änderung einführen</a>")
                         ]
                         currentCell.innerHTML = "<b"+(cell.subject != modSubject ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+nowSubject+"</b><br><span"+
-                        (cell.room != modRoom ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+modRoom+"</span><br><span"+
-                        (cell.teacher != modTeacher ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+modTeacher+"</span><span class='information'>" + currentInformations.join("<br>") + "</span>";
+                            (cell.room != modRoom ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+modRoom+"</span><br><span"+
+                            (cell.teacher != modTeacher ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+modTeacher+"</span><span class='information'>" +
+                            currentInformations.join("<br>") + "</span>";
                         if (subjectList[modSubject]) {
                             currentCell.className = subjectList[modSubject]
                         }
@@ -542,6 +543,7 @@
                             currentCell.lastElementChild.querySelector("#reset-teacher").addEventListener('click', () => {
                                 currentCell.lastElementChild.querySelector("#teacher-input").value = cell.teacher;
                             });
+                            console.log(currentCell.lastElementChild)
                             currentCell.lastElementChild.querySelector("#edit-button").addEventListener('click', async () => {
                                 if (currentCell.lastElementChild.querySelector("#exam-check").checked != isExam) {
                                     if (isExam) {
@@ -551,44 +553,77 @@
                                         saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "exam", exam: true});
                                     }
                                 }
-                                if (currentCell.lastElementChild.querySelector("#subject-option").value != modSubject) {
-                                    if (currentCell.lastElementChild.querySelector("#subject-option").value != cell.subject) {
-                                        if (modSubject == cell.subject) {
-                                            saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
-                                        } else {
-                                            let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
-                                            await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
-                                        }
-                                    } else {
-                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
-                                        await removeData(currentKey);
-                                    }
+                                // if (currentCell.lastElementChild.querySelector("#subject-option").value != modSubject) {
+                                //     if (currentCell.lastElementChild.querySelector("#subject-option").value != cell.subject) {
+                                //         if (modSubject == cell.subject) {
+                                //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
+                                //         } else {
+                                //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
+                                //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
+                                //         }
+                                //     } else {
+                                //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
+                                //         await removeData(currentKey);
+                                //     }
+                                // }
+                                if (modSubject != "" && modSubject != currentCell.lastElementChild.querySelector("#subject-option").value && currentCell.lastElementChild.querySelector("#subject-option").value != "") {
+                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
+                                    await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
                                 }
-                                if (currentCell.lastElementChild.querySelector("#room-input").value != modRoom && currentCell.lastElementChild.querySelector("#room-input").value != "") {
-                                    if (currentCell.lastElementChild.querySelector("#room-input").value != cell.room) {
-                                        if (modRoom == cell.room) {
-                                            saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
-                                        } else {
-                                            let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
-                                            await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
-                                        }
-                                    } else {
-                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
-                                        await removeData(currentKey);
-                                    }
+                                else if (modSubject == "" && currentCell.lastElementChild.querySelector("#subject-option").value != "") {
+                                    await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
                                 }
-                                if (currentCell.lastElementChild.querySelector("#teacher-input").value != modTeacher && currentCell.lastElementChild.querySelector("#teacher-input").value != "") {
-                                    if (currentCell.lastElementChild.querySelector("#teacher-input").value != cell.teacher) {
-                                        if (modTeacher == cell.teacher) {
-                                            saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
-                                        } else {
-                                            let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
-                                            await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
-                                        }
-                                    } else {
-                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
-                                        await removeData(currentKey);
-                                    }
+                                else if (modSubject != "" && currentCell.lastElementChild.querySelector("#subject-option").value == "") {
+                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
+                                    await removeData(currentKey);
+                                }
+                                // if (currentCell.lastElementChild.querySelector("#room-input").value != modRoom && currentCell.lastElementChild.querySelector("#room-input").value != "") {
+                                //     if (currentCell.lastElementChild.querySelector("#room-input").value != cell.room) {
+                                //         if (modRoom == cell.room) {
+                                //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
+                                //         } else {
+                                //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
+                                //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
+                                //         }
+                                //     } else {
+                                //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
+                                //         await removeData(currentKey);
+                                //     }
+                                // }
+                                if (modRoom != "" && modRoom != currentCell.lastElementChild.querySelector("#room-input").value && currentCell.lastElementChild.querySelector("#room-input").value != "") {
+                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
+                                    await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
+                                }
+                                else if (modRoom == "" && currentCell.lastElementChild.querySelector("#room-input").value != "") {
+                                    await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
+                                }
+                                else if (modRoom != "" && currentCell.lastElementChild.querySelector("#room-input").value == "") {
+                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
+                                    await removeData(currentKey);
+                                }
+                                // if (currentCell.lastElementChild.querySelector("#teacher-input").value != modTeacher && currentCell.lastElementChild.querySelector("#teacher-input").value != "") {
+                                //     if (currentCell.lastElementChild.querySelector("#teacher-input").value != cell.teacher) {
+                                //         if (modTeacher == cell.teacher) {
+                                //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
+                                //         } else {
+                                //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
+                                //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
+                                //         }
+                                //     } else {
+                                //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
+                                //         await removeData(currentKey);
+                                //     }
+                                // }
+                                if (modTeacher != "" && modTeacher != currentCell.lastElementChild.querySelector("#teacher-input").value && currentCell.lastElementChild.querySelector("#teacher-input").value != "") {
+                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
+                                    await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
+                                }
+                                else if (modTeacher == "" && currentCell.lastElementChild.querySelector("#teacher-input").value != "") {
+                                    await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
+                                }
+                                else if (modTeacher != "" && currentCell.lastElementChild.querySelector("#teacher-input").value == "") {
+                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
+                                    await removeData(currentKey);
                                 }
                                 // if (currentCell.lastElementChild.querySelector("#homework-input").value != cell.homework && currentCell.lastElementChild.querySelector("#homework-input").value != "") {
                                 //     if (currentCell.lastElementChild.querySelector("#homework-input").value != cell.homework) {
@@ -628,10 +663,10 @@
                                     let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
                                     await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
                                 }
-                                if (isHomework == "" && currentCell.lastElementChild.querySelector("#homework-input").value != "") {
-                                    saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
+                                else if (isHomework == "" && currentCell.lastElementChild.querySelector("#homework-input").value != "") {
+                                    await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
                                 }
-                                if (isHomework != "" && currentCell.lastElementChild.querySelector("#homework-input").value == "") {
+                                else if (isHomework != "" && currentCell.lastElementChild.querySelector("#homework-input").value == "") {
                                     let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
                                     await removeData(currentKey);
                                 }
