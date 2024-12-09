@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="loader.css">
     <script src="https://kit.fontawesome.com/87b26c3ff4.js" crossorigin="anonymous"></script>
     <style>
         body {
@@ -117,7 +118,7 @@
             border-radius: 4px;
             font-weight: 700;
             font-size: 18px;
-            margin-block: 10px;
+            margin-bottom: 10px;
             transition: background-color 0.3s;
         }
         .week-control a i:hover {
@@ -126,20 +127,19 @@
         .week-control p {
             font-weight: 700;
             font-size: 18px;
-            margin: 10px;
+            margin: 2px 10px 10px 10px;
+        }
+        .homework-icon {
+            color: #f69635;
+            margin-right: 4px;
+            font-size: 16px;
+
+            transform: translateY(-1px);
         }
     </style>
 </head>
 <body>
-    <h1>Save Data</h1>
-    <label for="titleInput">Title:</label>
-    <input type="text" id="titleInput" placeholder="Enter title"><br>
-    
-    <label for="dateInput">Date:</label>
-    <input type="text" id="dateInput" placeholder="Enter date"><br>
-    
-    <button onclick="saveDataList()">Save</button>
-
+    <br><br><br><br><br><br><br><br>
     <div style="display: flex; align-items: center; gap: 8px;" class="week-control">
         <a id="week-back"><i class='fa-solid fa-arrow-left' aria-hidden='true'></i></a>
         <p id="week-display">Kalendarwoche 48</p>
@@ -165,11 +165,90 @@
             <th id="saturday">Samstag</th>
             <th id="sunday">Sonntag</th>
         </tr>
+        <tr>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+        </tr>
+        <tr>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+        </tr>
+        <tr>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+        </tr>
+        <th colspan="7" class="loader-padding"><div class="loader"><div class="loader-content">Zehnuhrpause</div></div></th>
+        <tr>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+        </tr>
+        <tr>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+        </tr>
+        <th colspan="7" style="font-size: 28px;" class="loader-padding"><div style="padding-block: 15px;" class="loader"><div class="loader-content">Mittagspause</div></div></th>
+        <tr>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+        </tr>
+        <tr>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+        </tr>
+        <tr>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+        </tr>
+        <tr>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+        </tr>
     </table>
-
-    <h2>Saved Data</h2>
-    <ul id="dataList"></ul>
-
     <script type="module">
         // Import Firebase SDKs
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
@@ -319,7 +398,6 @@
         window.removeData = removeData;
 
         // Load data on page load
-        document.addEventListener('DOMContentLoaded', loadDataList);
     </script>
     <script src="data.js" type="text/javascript"></script>
     <script>
@@ -339,8 +417,36 @@
             return Math.ceil((daysSinceStartOfYear + dayOffset) / 7);
         }
         let currentWeek = getWeekNumber();
-        function addingEvents(usedAgenda) {
-
+        document.getElementById("week-display").textContent = "Kalendarwoche " + currentWeek;
+        switch (new Date().getDay()) {
+            case 0:
+                document.getElementById("sunday").style.backgroundColor = "#ffe9d3";
+                document.getElementById("sunday").style.borderColor = "#ffd1a4";
+                break;
+            case 1:
+                document.getElementById("monday").style.backgroundColor = "#ffe9d3";
+                document.getElementById("monday").style.borderColor = "#ffd1a4";
+                break;
+            case 2:
+                document.getElementById("tuesday").style.backgroundColor = "#ffe9d3";
+                document.getElementById("tuesday").style.borderColor = "#ffd1a4";
+                break;
+            case 3:
+                document.getElementById("wednesday").style.backgroundColor = "#ffe9d3";
+                document.getElementById("wednesday").style.borderColor = "#ffd1a4";
+                break;
+            case 4:
+                document.getElementById("thursday").style.backgroundColor = "#ffe9d3";
+                document.getElementById("thursday").style.borderColor = "#ffd1a4";
+                break;
+            case 5:
+                document.getElementById("friday").style.backgroundColor = "#ffe9d3";
+                document.getElementById("friday").style.borderColor = "#ffd1a4";
+                break;
+            case 6:
+                document.getElementById("saturday").style.backgroundColor = "#ffe9d3";
+                document.getElementById("saturday").style.borderColor = "#ffd1a4";
+                break;
         }
         async function reloadTable() {
             agenda.innerHTML = `<colgroup>
@@ -391,138 +497,120 @@
                     document.getElementById("saturday").style.borderColor = "#ffd1a4";
                     break;
             }
-            let agendaTable = structuredClone(defaultTable);
-            agendaTable.forEach((row, rowIndex) => {
-                if (row.length < 7) {
-                    Array.from({ length: 7 - row.length }, () => {
-                        agendaTable[rowIndex].push({})
-                    });
-                }
-            })
-            agendaEvents = await loadData()
-            agendaEvents.forEach((event) => {
-                if (event.week == currentWeek) {
-                    if (!agendaTable[event.row][event.day].special) {
-                        agendaTable[event.row][event.day].special = {};
+            try {
+                let agendaTable = structuredClone(defaultTable);
+                agendaTable.forEach((row, rowIndex) => {
+                    if (row.length < 7) {
+                        Array.from({ length: 7 - row.length }, () => {
+                            agendaTable[rowIndex].push({})
+                        });
                     }
-                    switch (event.type) {
-                        case "exam":
-                            agendaTable[event.row][event.day].special.exam = true;
-                            break;
-                        case "change":
-                            if (!agendaTable[event.row][event.day].special.change) {
-                                agendaTable[event.row][event.day].special.change = {};
-                            }
-                            switch (event.change) {
-                                case "subject":
-                                    agendaTable[event.row][event.day].special.change.subject = event.value;
-                                    break;
-                                case "room":
-                                    agendaTable[event.row][event.day].special.change.room = event.value;
-                                    break;
-                                case "teacher":
-                                    agendaTable[event.row][event.day].special.change.teacher = event.value;
-                                    break;
-                            }
-                            break;
-                        case "homework":
-                            agendaTable[event.row][event.day].special.homework = event.homework;
-                            break;
+                })
+                agendaEvents = await loadData()
+                agendaEvents.forEach((event) => {
+                    if (event.week == currentWeek) {
+                        if (!agendaTable[event.row][event.day].special) {
+                            agendaTable[event.row][event.day].special = {};
+                        }
+                        switch (event.type) {
+                            case "exam":
+                                agendaTable[event.row][event.day].special.exam = true;
+                                break;
+                            case "change":
+                                if (!agendaTable[event.row][event.day].special.change) {
+                                    agendaTable[event.row][event.day].special.change = {};
+                                }
+                                switch (event.change) {
+                                    case "subject":
+                                        if (event.value == "Kein Fach") {
+                                            agendaTable[event.row][event.day].empty = true
+                                        }
+                                        agendaTable[event.row][event.day].special.change.subject = event.value;
+                                        break;
+                                    case "room":
+                                        agendaTable[event.row][event.day].special.change.room = event.value;
+                                        break;
+                                    case "teacher":
+                                        agendaTable[event.row][event.day].special.change.teacher = event.value;
+                                        break;
+                                }
+                                break;
+                            case "homework":
+                                agendaTable[event.row][event.day].special.homework = event.homework;
+                                break;
+                        }
                     }
-                }
-            });
-            agendaTable.forEach((row, rowIndex) => {
-                let currentRow = document.createElement("tr");
-                if (rowIndex == 3) {
-                    let pause = document.createElement("th");
-                    pause.innerText = "Zehnuhrpause";
-                    pause.setAttribute("colspan", "7");
-                    agenda.appendChild(pause);
-                }
-                if (rowIndex == 5) {
-                    let pause = document.createElement("th");
-                    pause.style.paddingBlock = "15px";
-                    pause.innerText = "Mittagspause";
-                    pause.style.fontSize = "28px";
-                    pause.setAttribute("colspan", "7");
-                    agenda.appendChild(pause);
-                }
-                row.forEach((cell, columnIndex) => {
-                    let currentCell = document.createElement("td");
-                    let currentInformations = []
-                    if (Object.keys(cell).length != 0) {
-                        let examNow;
-                        let nowSubject;
-                        let modSubject = cell.subject;
-                        let modRoom = cell.room;
-                        let modTeacher = cell.teacher;
-                        if (cell.special) {
-                            if (cell.special.change) {
-                                if (cell.special.change.subject) { modSubject = cell.special.change.subject }
-                                if (cell.special.change.room) { modRoom = cell.special.change.room }
-                                if (cell.special.change.teacher) { modTeacher = cell.special.change.teacher }
-                            }
-                            if (cell.special.exam) {
-                                examNow = "<b style='color: #d93c41; font-weight: 800; font-size: 20px;'>Prüfung!</b><br>";
-                                nowSubject = "<span style='color: #d93c41; font-weight: 800;'>!</span> " + modSubject;
+                });
+
+                agendaTable.forEach((row, rowIndex) => {
+                    row.forEach((cell, columnIndex) => {
+                        if (agendaTable[rowIndex][columnIndex] == {}) {
+                            agendaTable[rowIndex][columnIndex] = { empty: true }
+                        }
+                    })
+                })
+                agendaTable.forEach((row, rowIndex) => {
+                    let currentRow = document.createElement("tr");
+                    if (rowIndex == 3) {
+                        let pause = document.createElement("th");
+                        pause.innerText = "Zehnuhrpause";
+                        pause.setAttribute("colspan", "7");
+                        agenda.appendChild(pause);
+                    }
+                    if (rowIndex == 5) {
+                        let pause = document.createElement("th");
+                        pause.style.paddingBlock = "15px";
+                        pause.innerText = "Mittagspause";
+                        pause.style.fontSize = "28px";
+                        pause.setAttribute("colspan", "7");
+                        agenda.appendChild(pause);
+                    }
+                    row.forEach((cell, columnIndex) => {
+                        let currentCell = document.createElement("td");
+                        let currentInformations = []
+                        if (Object.keys(cell).length > 1) {
+                            let examNow;
+                            let nowSubject;
+                            let modSubject = cell.subject;
+                            let modRoom = cell.room;
+                            let modTeacher = cell.teacher;
+                            if (cell.special) {
+                                if (cell.special.change) {
+                                    if (cell.special.change.subject) { modSubject = cell.special.change.subject }
+                                    if (cell.special.change.room) { modRoom = cell.special.change.room }
+                                    if (cell.special.change.teacher) { modTeacher = cell.special.change.teacher }
+                                }
+                                if (cell.special.exam) {
+                                    examNow = "<b style='color: #d93c41; font-weight: 800; font-size: 20px;'>Prüfung!</b><br>";
+                                    nowSubject = (cell.special && cell.special.homework ? '<i class="fa-regular fa-calendar homework-icon" aria-hidden="true"></i>' : "") + "<span style='color: #d93c41; font-weight: 800;'>!</span> " + modSubject;
+                                } else {
+                                    examNow = "";
+                                    nowSubject = (cell.special && cell.special.homework ? '<i class="fa-regular fa-calendar homework-icon" aria-hidden="true"></i>' : "") + modSubject;
+                                }
                             } else {
                                 examNow = "";
-                                nowSubject = modSubject;
+                                nowSubject = cell.subject;
                             }
-                        } else {
-                            examNow = "";
-                            nowSubject = cell.subject;
-                        }
-                        currentCell.style.position = "relative";
-                        currentInformations = [
-                            ("<a id='close-button'><i class='fa-solid fa-xmark' aria-hidden='true'></i></a>" + examNow + "<b>Fach: </b>" + modSubject),
-                            ("<b>Raum: </b>"+modRoom),
-                            ("<b>Lehrer/in: </b>"+modTeacher),
-                            ("<a id='edit-button'>Änderung einführen</a>")
-                        ]
-                        currentCell.innerHTML = "<b"+(cell.subject != modSubject ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+nowSubject+"</b><br><span"+
-                            (cell.room != modRoom ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+modRoom+"</span><br><span"+
-                            (cell.teacher != modTeacher ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+modTeacher+"</span><span class='information'>" +
-                            currentInformations.join("<br>") + "</span>";
-                        if (subjectList[modSubject]) {
-                            currentCell.className = subjectList[modSubject]
-                        }
-                        currentCell.lastElementChild.querySelector("#close-button").addEventListener('click', () => {
-                            setTimeout(() => {
-                                currentlyDisplayingInfo = false;
-                                currentlyEditingInfo = false;
-                                currentCell.lastElementChild.style.opacity = "0";
-                                setTimeout(() => {
-                                    currentCell.lastElementChild.style.visibility = "hidden";
-                                }, 300);
-                            }, 100);
-                        });
-                        currentCell.lastElementChild.querySelector("#edit-button").addEventListener('click', () => {
-                            let subjectOptions = ""
-                            subjectArray.forEach((subjectOption) => {
-                                subjectOptions += "<option value='" + subjectOption + "'>" + subjectOption + "</option>"
-                            });
-                            currentInformationsWhenEditing = [
-                                ("<a id='close-button'><i class='fa-solid fa-xmark' aria-hidden='true'></i></a><input type='checkbox' id='exam-check' style='float: left;'><span style='padding-left: 6px;transform: translateY(-0.7px); float: left; color: #d93c41; font-weight: 800;'> Prüfung</span></input>"),
-                                ("<b>Fach: </b>" + modSubject),
-                                ("<a id='reset-subject'><i class='fa-solid fa-arrow-rotate-right reset' aria-hidden='true'></i></a><select id='subject-option' style='margin-top: 4px; margin-bottom: 3px;'>" + subjectOptions + "</select>"),
+                            currentCell.style.position = "relative";
+                            currentInformations = [
+                                ("<a id='close-button'><i class='fa-solid fa-xmark' aria-hidden='true'></i></a>" + examNow + "<b>Fach: </b>" + modSubject),
                                 ("<b>Raum: </b>"+modRoom),
-                                ("<a id='reset-room'><i class='fa-solid fa-arrow-rotate-right reset' aria-hidden='true'></i></a><input type='text' id='room-input' style='margin-top: 2px; margin-bottom: 3px;'>"),
                                 ("<b>Lehrer/in: </b>"+modTeacher),
-                                ("<a id='reset-teacher'><i class='fa-solid fa-arrow-rotate-right reset' aria-hidden='true'></i></a><input type='text' id='teacher-input' style='margin-top: 2px; margin-bottom: 3px;'>"),
-                                ("<b>Hausaufgaben: </b>"+(cell.special && cell.special.homework ? cell.special.homework : "Keine Hausaufgaben")),
-                                ("<input type='text' id='homework-input' style='margin-top: 0px; margin-bottom: 3px;'>"),
-                                ("<a id='edit-button'>Änderung speichern</a></span>")
+                                ("<a id='edit-button'>Änderung einführen</a>")
                             ]
-                            currentCell.innerHTML = "<b>"+nowSubject+"</b><br>"+modRoom+"<br>"+modTeacher+"<span class='information'>" + currentInformationsWhenEditing.join("<br>");
-                            const isExam = cell.special && cell.special.exam ? true : false;
-                            const isHomework = cell.special && cell.special.homework ? cell.special.homework : false
-                            currentCell.lastElementChild.querySelector("#exam-check").checked = isExam;
-                            currentCell.lastElementChild.querySelector("#subject-option").value = modSubject;
-                            currentCell.lastElementChild.querySelector("#room-input").value = modRoom;
-                            currentCell.lastElementChild.querySelector("#teacher-input").value = modTeacher;
-                            currentCell.lastElementChild.style.opacity = "1";
-                            currentCell.lastElementChild.style.visibility = "visible";
+                            if (cell.empty) {
+                                currentCell.innerHTML = "<span class='information'>" + currentInformations.join("<br>") + "</span>";
+                            } else {
+                                currentCell.innerHTML = "<b"+(cell.subject != modSubject ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+nowSubject+"</b><br><span"+
+                                (cell.room != modRoom ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+modRoom+"</span><br><span"+
+                                (cell.teacher != modTeacher ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+modTeacher+"</span><span class='information'>" + currentInformations.join("<br>") + "</span>";
+                            }
+                            if (subjectList[modSubject]) {
+                                currentCell.className = subjectList[modSubject]
+                            }
+                            if (cell.empty) {
+                                currentCell.style = "border: 2px dashed #ddd";
+                            }
                             currentCell.lastElementChild.querySelector("#close-button").addEventListener('click', () => {
                                 setTimeout(() => {
                                     currentlyDisplayingInfo = false;
@@ -530,182 +618,343 @@
                                     currentCell.lastElementChild.style.opacity = "0";
                                     setTimeout(() => {
                                         currentCell.lastElementChild.style.visibility = "hidden";
-                                        reloadTable()
                                     }, 300);
                                 }, 100);
                             });
-                            currentCell.lastElementChild.querySelector("#reset-subject").addEventListener('click', () => {
-                                currentCell.lastElementChild.querySelector("#subject-option").value = cell.subject;
-                            });
-                            currentCell.lastElementChild.querySelector("#reset-room").addEventListener('click', () => {
-                                currentCell.lastElementChild.querySelector("#room-input").value = cell.room;
-                            });
-                            currentCell.lastElementChild.querySelector("#reset-teacher").addEventListener('click', () => {
-                                currentCell.lastElementChild.querySelector("#teacher-input").value = cell.teacher;
-                            });
-                            console.log(currentCell.lastElementChild)
-                            currentCell.lastElementChild.querySelector("#edit-button").addEventListener('click', async () => {
-                                if (currentCell.lastElementChild.querySelector("#exam-check").checked != isExam) {
-                                    if (isExam) {
-                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "exam");
-                                        await removeData(currentKey);
-                                    } else {
-                                        saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "exam", exam: true});
-                                    }
+                            currentCell.lastElementChild.querySelector("#edit-button").addEventListener('click', () => {
+                                let subjectOptions = ""
+                                subjectArray.forEach((subjectOption) => {
+                                    subjectOptions += "<option value='" + subjectOption + "'>" + subjectOption + "</option>"
+                                });
+                                currentInformationsWhenEditing = [
+                                    ("<a id='close-button'><i class='fa-solid fa-xmark' aria-hidden='true'></i></a><input type='checkbox' id='exam-check' style='float: left;'><span style='padding-left: 6px;transform: translateY(-0.7px); float: left; color: #d93c41; font-weight: 800;'> Prüfung</span></input>"),
+                                    ("<b>Fach: </b>" + modSubject),
+                                    ("<a id='reset-subject'><i class='fa-solid fa-arrow-rotate-right reset' aria-hidden='true'></i></a><select id='subject-option' style='margin-top: 4px; margin-bottom: 3px;'>" + subjectOptions + "</select>"),
+                                    ("<b>Raum: </b>"+modRoom),
+                                    ("<a id='reset-room'><i class='fa-solid fa-arrow-rotate-right reset' aria-hidden='true'></i></a><input type='text' id='room-input' style='margin-top: 2px; margin-bottom: 3px;'>"),
+                                    ("<b>Lehrer/in: </b>"+modTeacher),
+                                    ("<a id='reset-teacher'><i class='fa-solid fa-arrow-rotate-right reset' aria-hidden='true'></i></a><input type='text' id='teacher-input' style='margin-top: 2px; margin-bottom: 3px;'>"),
+                                    ("<b>Hausaufgaben: </b>"+(cell.special && cell.special.homework ? cell.special.homework : "Keine Hausaufgaben")),
+                                    ("<a id='reset-homework'><i class='fa-solid fa-arrow-rotate-right reset' aria-hidden='true'></i></a><input type='text' id='homework-input' style='margin-top: 0px; margin-bottom: 3px;'>"),
+                                    ("<a id='edit-button'>Änderung speichern</a></span>")
+                                ]
+                                var rect = currentCell.getBoundingClientRect();
+                                console.log(rect.top, rect.right, rect.bottom, rect.left);
+                                if (cell.empty) {
+                                    currentCell.innerHTML = "<span class='information'>" + currentInformationsWhenEditing.join("<br>") + "</span>";
+                                } else {
+                                    currentCell.innerHTML = "<b"+(cell.subject != modSubject ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+nowSubject+"</b><br><span"+
+                                        (cell.room != modRoom ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+modRoom+"</span><br><span"+
+                                        (cell.teacher != modTeacher ? " style='background-color: rgb(255, 255, 0, 0.5); border-radius: 4px; padding-inline: 3px;'>" : ">")+modTeacher+"</span><span class='information'>" +
+                                        currentInformationsWhenEditing.join("<br>") + "</span>";
                                 }
-                                // if (currentCell.lastElementChild.querySelector("#subject-option").value != modSubject) {
-                                //     if (currentCell.lastElementChild.querySelector("#subject-option").value != cell.subject) {
-                                //         if (modSubject == cell.subject) {
-                                //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
-                                //         } else {
-                                //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
-                                //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
-                                //         }
-                                //     } else {
-                                //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
-                                //         await removeData(currentKey);
-                                //     }
-                                // }
-                                if (modSubject != "" && modSubject != currentCell.lastElementChild.querySelector("#subject-option").value && currentCell.lastElementChild.querySelector("#subject-option").value != "") {
-                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
-                                    await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
-                                }
-                                else if (modSubject == "" && currentCell.lastElementChild.querySelector("#subject-option").value != "") {
-                                    await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
-                                }
-                                else if (modSubject != "" && currentCell.lastElementChild.querySelector("#subject-option").value == "") {
-                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
-                                    await removeData(currentKey);
-                                }
-                                // if (currentCell.lastElementChild.querySelector("#room-input").value != modRoom && currentCell.lastElementChild.querySelector("#room-input").value != "") {
-                                //     if (currentCell.lastElementChild.querySelector("#room-input").value != cell.room) {
-                                //         if (modRoom == cell.room) {
-                                //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
-                                //         } else {
-                                //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
-                                //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
-                                //         }
-                                //     } else {
-                                //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
-                                //         await removeData(currentKey);
-                                //     }
-                                // }
-                                if (modRoom != "" && modRoom != currentCell.lastElementChild.querySelector("#room-input").value && currentCell.lastElementChild.querySelector("#room-input").value != "") {
-                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
-                                    await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
-                                }
-                                else if (modRoom == "" && currentCell.lastElementChild.querySelector("#room-input").value != "") {
-                                    await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
-                                }
-                                else if (modRoom != "" && currentCell.lastElementChild.querySelector("#room-input").value == "") {
-                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
-                                    await removeData(currentKey);
-                                }
-                                // if (currentCell.lastElementChild.querySelector("#teacher-input").value != modTeacher && currentCell.lastElementChild.querySelector("#teacher-input").value != "") {
-                                //     if (currentCell.lastElementChild.querySelector("#teacher-input").value != cell.teacher) {
-                                //         if (modTeacher == cell.teacher) {
-                                //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
-                                //         } else {
-                                //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
-                                //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
-                                //         }
-                                //     } else {
-                                //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
-                                //         await removeData(currentKey);
-                                //     }
-                                // }
-                                if (modTeacher != "" && modTeacher != currentCell.lastElementChild.querySelector("#teacher-input").value && currentCell.lastElementChild.querySelector("#teacher-input").value != "") {
-                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
-                                    await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
-                                }
-                                else if (modTeacher == "" && currentCell.lastElementChild.querySelector("#teacher-input").value != "") {
-                                    await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
-                                }
-                                else if (modTeacher != "" && currentCell.lastElementChild.querySelector("#teacher-input").value == "") {
-                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
-                                    await removeData(currentKey);
-                                }
-                                // if (currentCell.lastElementChild.querySelector("#homework-input").value != cell.homework && currentCell.lastElementChild.querySelector("#homework-input").value != "") {
-                                //     if (currentCell.lastElementChild.querySelector("#homework-input").value != cell.homework) {
-                                //         if ("" == cell.homework) {
-                                //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#teacher-input").value});
-                                //         } else {
-                                //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
-                                //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
-                                //         }
-                                //     } else {
-                                //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.homework);
-                                //         await removeData(currentKey);
-                                //     }
-                                // } else {
-                                //     if (currentCell.lastElementChild.querySelector("#homework-input").value == cell.homework && currentCell.lastElementChild.querySelector("#homework-input").value == "") {
-                                //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.homework);
-                                //         await removeData(currentKey);
-                                //     }
-                                // }
-                                console.log("homework");
-                                // if (currentCell.lastElementChild.querySelector("#homework-input").value != cell.special && (cell.special.homework ? true : false)) {
-                                //     if (currentCell.lastElementChild.querySelector("#homework-input").value != "") {
-                                //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
-                                //         await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
-                                //         if (cell.special.homework == "") {
-                                //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
-                                //         } else {
-                                //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
-                                //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
-                                //         }
-                                //     } else {
-                                //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
-                                //         await removeData(currentKey);
-                                //     }
-                                // }
-                                if (isHomework != "" && isHomework != currentCell.lastElementChild.querySelector("#homework-input").value && currentCell.lastElementChild.querySelector("#homework-input").value != "") {
-                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
-                                    await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
-                                }
-                                else if (isHomework == "" && currentCell.lastElementChild.querySelector("#homework-input").value != "") {
-                                    await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
-                                }
-                                else if (isHomework != "" && currentCell.lastElementChild.querySelector("#homework-input").value == "") {
-                                    let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
-                                    await removeData(currentKey);
-                                }
-                                setTimeout(() => {
-                                    currentlyDisplayingInfo = false;
-                                    currentlyEditingInfo = false;
-                                    currentCell.lastElementChild.style.opacity = "0";
+                                const isExam = cell.special && cell.special.exam ? true : false;
+                                const isHomework = cell.special && cell.special.homework ? cell.special.homework : ""
+                                currentCell.lastElementChild.querySelector("#exam-check").checked = isExam;
+                                currentCell.lastElementChild.querySelector("#subject-option").value = modSubject;
+                                currentCell.lastElementChild.querySelector("#room-input").value = modRoom;
+                                currentCell.lastElementChild.querySelector("#teacher-input").value = modTeacher;
+                                currentCell.lastElementChild.querySelector("#homework-input").value = isHomework;
+                                currentCell.lastElementChild.style.opacity = "1";
+                                currentCell.lastElementChild.style.visibility = "visible";
+                                currentCell.lastElementChild.querySelector("#close-button").addEventListener('click', () => {
                                     setTimeout(() => {
-                                        currentCell.lastElementChild.style.visibility = "hidden";
-                                        reloadTable()
-                                    }, 300);
-                                }, 100);
+                                        currentlyDisplayingInfo = false;
+                                        currentlyEditingInfo = false;
+                                        currentCell.lastElementChild.style.opacity = "0";
+                                        setTimeout(() => {
+                                            currentCell.lastElementChild.style.visibility = "hidden";
+                                            reloadTable()
+                                        }, 300);
+                                    }, 100);
+                                });
+                                currentCell.lastElementChild.querySelector("#reset-subject").addEventListener('click', () => {
+                                    currentCell.lastElementChild.querySelector("#subject-option").value = cell.subject;
+                                });
+                                currentCell.lastElementChild.querySelector("#reset-room").addEventListener('click', () => {
+                                    currentCell.lastElementChild.querySelector("#room-input").value = cell.room;
+                                });
+                                currentCell.lastElementChild.querySelector("#reset-teacher").addEventListener('click', () => {
+                                    currentCell.lastElementChild.querySelector("#teacher-input").value = cell.teacher;
+                                });
+                                currentCell.lastElementChild.querySelector("#reset-homework").addEventListener('click', () => {
+                                    currentCell.lastElementChild.querySelector("#homework-input").value = "";
+                                });
+                                console.log(currentCell.lastElementChild)
+                                currentCell.lastElementChild.querySelector("#edit-button").addEventListener('click', async () => {
+                                    if (currentCell.lastElementChild.querySelector("#exam-check").checked != isExam) {
+                                        if (isExam) {
+                                            let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "exam");
+                                            await removeData(currentKey);
+                                        } else {
+                                            saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "exam", exam: true});
+                                        }
+                                    }
+                                    // if (currentCell.lastElementChild.querySelector("#subject-option").value != modSubject) {
+                                    //     if (currentCell.lastElementChild.querySelector("#subject-option").value != cell.subject) {
+                                    //         if (modSubject == cell.subject) {
+                                    //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
+                                    //         } else {
+                                    //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
+                                    //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
+                                    //         }
+                                    //     } else {
+                                    //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
+                                    //         await removeData(currentKey);
+                                    //     }
+                                    // }
+                                    if (modSubject != cell.subject && modSubject != currentCell.lastElementChild.querySelector("#subject-option").value && currentCell.lastElementChild.querySelector("#subject-option").value != cell.subject) {
+                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
+                                        await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
+                                    }
+                                    else if (modSubject == cell.subject && currentCell.lastElementChild.querySelector("#subject-option").value != cell.subject) {
+                                        console.log(currentCell.lastElementChild.querySelector("#subject-option").value);
+                                        await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "subject", value: currentCell.lastElementChild.querySelector("#subject-option").value});
+                                    }
+                                    else if (modSubject != cell.subject && currentCell.lastElementChild.querySelector("#subject-option").value == cell.subject) {
+                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "subject");
+                                        await removeData(currentKey);
+                                    }
+                                    // if (currentCell.lastElementChild.querySelector("#room-input").value != modRoom && currentCell.lastElementChild.querySelector("#room-input").value != "") {
+                                    //     if (currentCell.lastElementChild.querySelector("#room-input").value != cell.room) {
+                                    //         if (modRoom == cell.room) {
+                                    //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
+                                    //         } else {
+                                    //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
+                                    //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
+                                    //         }
+                                    //     } else {
+                                    //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
+                                    //         await removeData(currentKey);
+                                    //     }
+                                    // }
+                                    if (modRoom != cell.room && modRoom != currentCell.lastElementChild.querySelector("#room-input").value && currentCell.lastElementChild.querySelector("#room-input").value != cell.room) {
+                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
+                                        await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
+                                    }
+                                    else if (modRoom == cell.room && currentCell.lastElementChild.querySelector("#room-input").value != cell.room) {
+                                        await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "room", value: currentCell.lastElementChild.querySelector("#room-input").value});
+                                    }
+                                    else if (modRoom != cell.room && currentCell.lastElementChild.querySelector("#room-input").value == cell.room) {
+                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "room");
+                                        await removeData(currentKey);
+                                    }
+                                    // if (currentCell.lastElementChild.querySelector("#teacher-input").value != modTeacher && currentCell.lastElementChild.querySelector("#teacher-input").value != "") {
+                                    //     if (currentCell.lastElementChild.querySelector("#teacher-input").value != cell.teacher) {
+                                    //         if (modTeacher == cell.teacher) {
+                                    //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
+                                    //         } else {
+                                    //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
+                                    //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
+                                    //         }
+                                    //     } else {
+                                    //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
+                                    //         await removeData(currentKey);
+                                    //     }
+                                    // }
+                                    if (modTeacher != "" && modTeacher != currentCell.lastElementChild.querySelector("#teacher-input").value && currentCell.lastElementChild.querySelector("#teacher-input").value != "") {
+                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
+                                        await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
+                                    }
+                                    else if (modTeacher == "" && currentCell.lastElementChild.querySelector("#teacher-input").value != "") {
+                                        await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
+                                    }
+                                    else if (modTeacher != "" && currentCell.lastElementChild.querySelector("#teacher-input").value == "") {
+                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
+                                        await removeData(currentKey);
+                                    }
+                                    // if (currentCell.lastElementChild.querySelector("#homework-input").value != cell.homework && currentCell.lastElementChild.querySelector("#homework-input").value != "") {
+                                    //     if (currentCell.lastElementChild.querySelector("#homework-input").value != cell.homework) {
+                                    //         if ("" == cell.homework) {
+                                    //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#teacher-input").value});
+                                    //         } else {
+                                    //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "change", "teacher");
+                                    //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "change", change: "teacher", value: currentCell.lastElementChild.querySelector("#teacher-input").value});
+                                    //         }
+                                    //     } else {
+                                    //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.homework);
+                                    //         await removeData(currentKey);
+                                    //     }
+                                    // } else {
+                                    //     if (currentCell.lastElementChild.querySelector("#homework-input").value == cell.homework && currentCell.lastElementChild.querySelector("#homework-input").value == "") {
+                                    //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.homework);
+                                    //         await removeData(currentKey);
+                                    //     }
+                                    // }
+                                    console.log("homework");
+                                    // if (currentCell.lastElementChild.querySelector("#homework-input").value != cell.special && (cell.special.homework ? true : false)) {
+                                    //     if (currentCell.lastElementChild.querySelector("#homework-input").value != "") {
+                                    //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
+                                    //         await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
+                                    //         if (cell.special.homework == "") {
+                                    //             saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
+                                    //         } else {
+                                    //             let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
+                                    //             await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
+                                    //         }
+                                    //     } else {
+                                    //         let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
+                                    //         await removeData(currentKey);
+                                    //     }
+                                    // }
+                                    if (isHomework != "" && isHomework != currentCell.lastElementChild.querySelector("#homework-input").value && currentCell.lastElementChild.querySelector("#homework-input").value != "") {
+                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
+                                        await editData(currentKey, {week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
+                                    }
+                                    else if (isHomework == "" && currentCell.lastElementChild.querySelector("#homework-input").value != "") {
+                                        await saveData({week: currentWeek, day: columnIndex, row: rowIndex, type: "homework", homework: currentCell.lastElementChild.querySelector("#homework-input").value});
+                                    }
+                                    else if (isHomework != "" && currentCell.lastElementChild.querySelector("#homework-input").value == "") {
+                                        let currentKey = await findKeyByTypeAndChange(currentWeek, columnIndex, rowIndex, "homework", cell.special.homework);
+                                        await removeData(currentKey);
+                                    }
+                                    setTimeout(() => {
+                                        currentlyDisplayingInfo = false;
+                                        currentlyEditingInfo = false;
+                                        currentCell.lastElementChild.style.opacity = "0";
+                                        setTimeout(() => {
+                                            currentCell.lastElementChild.style.visibility = "hidden";
+                                            reloadTable()
+                                        }, 300);
+                                    }, 100);
+                                });
                             });
-                        });
-                        currentRow.appendChild(currentCell);
-                    } else {
-                        currentCell.style = "border: 2px dashed #ddd";
-                        currentCell.innerHTML = "</span><span class='information'><a id='close-button'><i class='fa-solid fa-xmark' aria-hidden='true'></i></a>Füge Fach hier hinzu!<a id='edit-button'>Änderung einführen</a></span>"
-                        currentCell.style.position = "relative";
-                        currentRow.appendChild(currentCell);
-                    }
-                    if (columnIndex == 0) {
-                        currentCell.lastElementChild.style.marginLeft = "-124px";
-                    }
-                    if (columnIndex == 6) {
-                        currentCell.lastElementChild.style.marginLeft = "-180px";
-                    }
-                    currentCell.lastElementChild.querySelector("#close-button").addEventListener('click', () => {
-                        setTimeout(() => {
-                            currentlyDisplayingInfo = false;
-                            currentCell.lastElementChild.style.opacity = "0";
+                            currentRow.appendChild(currentCell);
+                        } else {
+                            currentCell.style = "border: 2px dashed #ddd";
+                            // currentCell.innerHTML = "</span><span class='information'><a id='close-button'><i class='fa-solid fa-xmark' aria-hidden='true'></i></a>Füge Fach hier hinzu!<a id='edit-button'>Änderung einführen</a></span>"
+                            currentInformations = [
+                                ("<a id='close-button'><i class='fa-solid fa-xmark' aria-hidden='true'></i></a><b>Fach: </b>Kein Fach"),
+                                ("<b>Raum: </b>Kein Raum"),
+                                ("<b>Lehrer/in: </b>Kein/e Lehrer/in"),
+                                ("<a id='edit-button'>Änderung einführen</a>")
+                            ]
+                            currentCell.innerHTML = "<span class='information'>"+currentInformations.join("<br>") + "</span>";
+                            currentCell.style.position = "relative";
+                            currentRow.appendChild(currentCell);
+                        }
+                        if (columnIndex == 0) {
+                            currentCell.lastElementChild.style.marginLeft = "-124px";
+                        }
+                        if (columnIndex == 6) {
+                            currentCell.lastElementChild.style.marginLeft = "-180px";
+                        }
+                        currentCell.lastElementChild.querySelector("#close-button").addEventListener('click', () => {
                             setTimeout(() => {
-                                currentCell.lastElementChild.style.visibility = "hidden";
-                            }, 300)
-                        }, 100)
-                    })
+                                currentlyDisplayingInfo = false;
+                                currentCell.lastElementChild.style.opacity = "0";
+                                setTimeout(() => {
+                                    currentCell.lastElementChild.style.visibility = "hidden";
+                                }, 300)
+                            }, 100)
+                        })
+                    });
+                    agenda.appendChild(currentRow);
                 });
-                agenda.appendChild(currentRow);
-            });
+            } catch(mainError) {
+                agenda.innerHTML = `<colgroup>
+                <col style="width: calc(100% / 7);">
+                <col style="width: calc(100% / 7);">
+                <col style="width: calc(100% / 7);">
+                <col style="width: calc(100% / 7);">
+                <col style="width: calc(100% / 7);">
+                <col style="width: calc(100% / 7);">
+                <col style="width: calc(100% / 7);">
+            </colgroup>
+            <tr>
+                <th id="monday">Montag</th>
+                <th id="tuesday">Dienstag</th>
+                <th id="wednesday">Mittwoch</th>
+                <th id="thursday">Donnerstag</th>
+                <th id="friday">Freitag</th>
+                <th id="saturday">Samstag</th>
+                <th id="sunday">Sonntag</th>
+            </tr>
+            <tr>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            </tr>
+            <tr>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            </tr>
+            <tr>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            </tr>
+            <th colspan="7" class="loader-padding"><div class="loader"><div class="loader-content">Zehnuhrpause</div></div></th>
+            <tr>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            </tr>
+            <tr>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            </tr>
+            <th colspan="7" style="font-size: 28px;" class="loader-padding"><div style="padding-block: 15px;" class="loader"><div class="loader-content">Mittagspause</div></div></th>
+            <tr>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            </tr>
+            <tr>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            </tr>
+            <tr>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            </tr>
+            <tr>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+                <td class="loader-padding"><div class="loader"><div class="loader-content"><b>Fach</b><br><span>Zimmer</span><br><span>Lehrer</span></div></div></td>
+            </tr>`;
+            console.error(mainError)
+            }
 
         const cells = document.querySelectorAll("#agenda td");
 

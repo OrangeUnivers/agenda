@@ -1,0 +1,973 @@
+.loader-padding {
+    margin: 0px;
+    border: 0px solid #ffffff;
+    background-color: #ffffff00;
+    border-radius: 8px;
+    padding: 2px;
+}
+th.loader-padding {
+    border-radius: 15px;
+}
+
+.loader {
+    position: relative;
+    border: 0px solid #ffffff00;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 8px;
+    transition: filter 0.3s;
+    cursor: pointer;
+}
+
+th .loader {
+    border-radius: 15px;
+}
+.loader::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 10px;
+    padding: 2px;
+    background: conic-gradient(from 0deg, #ffffff, #f2f2f2, #ffffff, #ffffff);
+    /* Gradient spans around the border */
+    background-size: 300% 300%;
+    /* Larger gradient for smoother animation */
+    z-index: -1;
+    /* Keeps the border behind the box */
+    animation: gradient-spin 3s linear infinite;
+    /* Only animate the gradient */
+}
+th .loader::before {
+    border-radius: 17px;
+}
+
+@keyframes gradient-spin {
+  0% {
+    background: conic-gradient(
+      from 0.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  1% {
+    background: conic-gradient(
+      from 3.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  2% {
+    background: conic-gradient(
+      from 7.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  3% {
+    background: conic-gradient(
+      from 10.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  4% {
+    background: conic-gradient(
+      from 14.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  5% {
+    background: conic-gradient(
+      from 18.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  6% {
+    background: conic-gradient(
+      from 21.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  7% {
+    background: conic-gradient(
+      from 25.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  8% {
+    background: conic-gradient(
+      from 28.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  9% {
+    background: conic-gradient(
+      from 32.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  10% {
+    background: conic-gradient(
+      from 36.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  11% {
+    background: conic-gradient(
+      from 39.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  12% {
+    background: conic-gradient(
+      from 43.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  13% {
+    background: conic-gradient(
+      from 46.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  14% {
+    background: conic-gradient(
+      from 50.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  15% {
+    background: conic-gradient(
+      from 54.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  16% {
+    background: conic-gradient(
+      from 57.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  17% {
+    background: conic-gradient(
+      from 61.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  18% {
+    background: conic-gradient(
+      from 64.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  19% {
+    background: conic-gradient(
+      from 68.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  20% {
+    background: conic-gradient(
+      from 72.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  21% {
+    background: conic-gradient(
+      from 75.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  22% {
+    background: conic-gradient(
+      from 79.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  23% {
+    background: conic-gradient(
+      from 82.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  24% {
+    background: conic-gradient(
+      from 86.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  25% {
+    background: conic-gradient(
+      from 90.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  26% {
+    background: conic-gradient(
+      from 93.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  27% {
+    background: conic-gradient(
+      from 97.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  28% {
+    background: conic-gradient(
+      from 100.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  29% {
+    background: conic-gradient(
+      from 104.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  30% {
+    background: conic-gradient(
+      from 108.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  31% {
+    background: conic-gradient(
+      from 111.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  32% {
+    background: conic-gradient(
+      from 115.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  33% {
+    background: conic-gradient(
+      from 118.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  34% {
+    background: conic-gradient(
+      from 122.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  35% {
+    background: conic-gradient(
+      from 126.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  36% {
+    background: conic-gradient(
+      from 129.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  37% {
+    background: conic-gradient(
+      from 133.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  38% {
+    background: conic-gradient(
+      from 136.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  39% {
+    background: conic-gradient(
+      from 140.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  40% {
+    background: conic-gradient(
+      from 144.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  41% {
+    background: conic-gradient(
+      from 147.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  42% {
+    background: conic-gradient(
+      from 151.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  43% {
+    background: conic-gradient(
+      from 154.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  44% {
+    background: conic-gradient(
+      from 158.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  45% {
+    background: conic-gradient(
+      from 162.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  46% {
+    background: conic-gradient(
+      from 165.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  47% {
+    background: conic-gradient(
+      from 169.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  48% {
+    background: conic-gradient(
+      from 172.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  49% {
+    background: conic-gradient(
+      from 176.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  50% {
+    background: conic-gradient(
+      from 180.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  51% {
+    background: conic-gradient(
+      from 183.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  52% {
+    background: conic-gradient(
+      from 187.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  53% {
+    background: conic-gradient(
+      from 190.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  54% {
+    background: conic-gradient(
+      from 194.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  55% {
+    background: conic-gradient(
+      from 198.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  56% {
+    background: conic-gradient(
+      from 201.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  57% {
+    background: conic-gradient(
+      from 205.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  58% {
+    background: conic-gradient(
+      from 208.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  59% {
+    background: conic-gradient(
+      from 212.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  60% {
+    background: conic-gradient(
+      from 216.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  61% {
+    background: conic-gradient(
+      from 219.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  62% {
+    background: conic-gradient(
+      from 223.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  63% {
+    background: conic-gradient(
+      from 226.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  64% {
+    background: conic-gradient(
+      from 230.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  65% {
+    background: conic-gradient(
+      from 234.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  66% {
+    background: conic-gradient(
+      from 237.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  67% {
+    background: conic-gradient(
+      from 241.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  68% {
+    background: conic-gradient(
+      from 244.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  69% {
+    background: conic-gradient(
+      from 248.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  70% {
+    background: conic-gradient(
+      from 252.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  71% {
+    background: conic-gradient(
+      from 255.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  72% {
+    background: conic-gradient(
+      from 259.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  73% {
+    background: conic-gradient(
+      from 262.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  74% {
+    background: conic-gradient(
+      from 266.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  75% {
+    background: conic-gradient(
+      from 270.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  76% {
+    background: conic-gradient(
+      from 273.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  77% {
+    background: conic-gradient(
+      from 277.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  78% {
+    background: conic-gradient(
+      from 280.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  79% {
+    background: conic-gradient(
+      from 284.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  80% {
+    background: conic-gradient(
+      from 288.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  81% {
+    background: conic-gradient(
+      from 291.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  82% {
+    background: conic-gradient(
+      from 295.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  83% {
+    background: conic-gradient(
+      from 298.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  84% {
+    background: conic-gradient(
+      from 302.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  85% {
+    background: conic-gradient(
+      from 306.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  86% {
+    background: conic-gradient(
+      from 309.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  87% {
+    background: conic-gradient(
+      from 313.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  88% {
+    background: conic-gradient(
+      from 316.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  89% {
+    background: conic-gradient(
+      from 320.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  90% {
+    background: conic-gradient(
+      from 324.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  91% {
+    background: conic-gradient(
+      from 327.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  92% {
+    background: conic-gradient(
+      from 331.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  93% {
+    background: conic-gradient(
+      from 334.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  94% {
+    background: conic-gradient(
+      from 338.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  95% {
+    background: conic-gradient(
+      from 342.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  96% {
+    background: conic-gradient(
+      from 345.6deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  97% {
+    background: conic-gradient(
+      from 349.2deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  98% {
+    background: conic-gradient(
+      from 352.8deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  99% {
+    background: conic-gradient(
+      from 356.4deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+  100% {
+    background: conic-gradient(
+      from 360.0deg,
+      #efefef,
+      #ddd,
+      #efefef,
+      #efefef
+    );
+  }
+}
+
+.loader-content {
+    width: 100%;
+    height: 100%;
+    color: #ffffff00;
+    animation: color-load 3s linear infinite;
+}
+
+@keyframes color-load {
+    0% {
+        color: #ffffff00;
+    }
+    50% {
+        color: #ddd;
+    }
+}
